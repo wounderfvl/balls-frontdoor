@@ -6,7 +6,7 @@ import "react-day-picker/dist/style.css";
 
 const BookingCard = () => {
   const [selectedField, setSelectedField] = useState<string | null>(null);
-  const [selectedDate, setSelectedDate] = useState<Date | null>(null);
+  const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
   const [selectedTime, setSelectedTime] = useState<string | null>(null);
 
   // Mock user data - replace with actual user context
