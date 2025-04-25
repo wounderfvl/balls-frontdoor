@@ -1,28 +1,29 @@
 "use client";
 
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { FieldCard } from "../../components/FieldCard";
 
 export default function Home() {
-  // Mock data
-  const fields = [
-    { id: 1, name: "Field A", location: "North Wing", image: "/field-a.jpg" },
-    { id: 2, name: "Field B", location: "South Wing", image: "/field-b.jpg" },
-  ];
+  const router = useRouter();
+
+  const handleLogin = () => {
+    router.push("/sign-in"); // Navigate to the Sign-In page
+  };
 
   return (
     <main className="home-container">
+      {/* Hero Section */}
       <section className="hero">
-        <h1>Book Your Soccer Field</h1>
-        <p>Reserve your play time and earn rewards with every booking</p>
+        <h1>Welcome to the Soccer Field Booking App</h1>
+        <p>Reserve your play time and earn rewards with every booking.</p>
       </section>
-      \
-      <section className="fields-section">
-        <h2>Our Fields</h2>
-        <div className="fields-grid">
-          {fields.map((field) => (
-            <FieldCard key={field.id} field={field} />
-          ))}
-        </div>
+
+      {/* Login Button */}
+      <section className="auth-buttons">
+        <button onClick={handleLogin} className="login-button">
+          Login
+        </button>
       </section>
     </main>
   );
