@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@fullhuman/postcss-purgecss": "^7.0.2",
     "@ljharb/tsconfig": "^0.3.2",
     "@tailwindcss/postcss": "^4",
     "@types/node": "22.14.1",
